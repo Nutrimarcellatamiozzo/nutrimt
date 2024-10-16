@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutricionista Marcella Tamiozzo</title>
+    <style>
+        body {font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f8f9fa; color: #333;}
+        header, footer {background-color: #004080; color: white; text-align: center; padding: 20px;}
+        nav {background-color: #00bfa5; padding: 10px; text-align: center;}
+        nav a {color: white; margin: 0 15px; text-decoration: none;}
+        section {padding: 20px;}
+        input, textarea, button {width: 100%; padding: 10px; margin: 10px 0;}
+        button {background-color: #00bfa5; color: white; border: none;}
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Nutricionista Marcella Tamiozzo</h1>
+    <p>Nutrição e Marketing Pessoal</p>
+</header>
+
+<nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#blog">Blog</a>
+    <a href="#calculadoras">Calculadoras</a>
+    <a href="#contato">Contato</a>
+</nav>
+
+<section id="sobre">
+    <h2>Sobre Mim</h2>
+    <p>Especialista em nutrição personalizada, ajudando a transformar vidas através de alimentação saudável.</p>
+</section>
+
+<section id="blog">
+    <h2>Blog</h2>
+    <p>Confira artigos sobre nutrição, saúde e bem-estar.</p>
+</section>
+
+<section id="calculadoras">
+    <h2>Calculadoras</h2>
+    <p>Calculadora de IMC:</p>
+    <input type="number" id="peso" placeholder="Peso (kg)">
+    <input type="number" id="altura" placeholder="Altura (cm)">
+    <button onclick="calcularIMC()">Calcular IMC</button>
+    <p id="resultadoIMC"></p>
+</section>
+
+<section id="contato">
+    <h2>Contato</h2>
+    <form>
+        <input type="text" placeholder="Nome" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Mensagem" required></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+</section>
+
+<footer>
+    <p>@nutri.marcellatamiozzo</p>
+    <p>&copy; 2024</p>
+</footer>
+
+<script>
+    function calcularIMC() {
+        const peso = document.getElementById('peso').value;
+        const altura = document.getElementById('altura').value / 100;
+        const imc = (peso / (altura * altura)).toFixed(2);
+        document.getElementById('resultadoIMC').innerText = 'Seu IMC é: ' + imc;
+    }
+</script>
+
+</body>
+</html>
